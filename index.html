@@ -81,25 +81,25 @@
         {{block.css}}
       </style>
       <div class="bg-white">
-        {{block.html_block}}
+        {{block.html_code_block}}
       </div>
       <a href="#" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Read more</a>
       <div class="demo-info">
         <h3>HTML</h3>
         <pre>
-          {{block.html_block | replace: "<", "< "}}
+          {{block.html_code_block | replace: "<", "< "}}
         </pre>
           {% if block.css  != "" %}
           <h3>CSS</h3>
           <code>
-            {{block.css_block}}
+            {{block.css_code_block}}
           </code>
         {% endif %}
 
           {% if block.js != "" %}
           <h3>JS</h3>
           <code>
-            {{block.js_block}}
+            {{block.js_code_block}}
           </code>
         {% endif %}
       </div>
