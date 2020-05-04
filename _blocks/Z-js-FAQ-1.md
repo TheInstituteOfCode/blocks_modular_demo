@@ -3,6 +3,7 @@ header-bar-link: Javascript
 heading: FAQ
 html_code_block: |
 
+  ``` HTML
   <section class="padded">
 
     <h2 class="centered padded-1"> FAQs </h2>
@@ -51,12 +52,29 @@ css_code_block: |
   transition: all .35s;
   }
 
-  /* NEED DANIELs HELP to stop auto popping back open, and make the thing twist */
   .accordion dt a::after {
   content: "+";
   }
   .open::after {
   transform: rotateZ(45deg);
   }
+
+js_code_block: |
+
+  $(document).ready(function() {
+    var allPanels = $('.accordion > dd').hide();
+
+      $('.accordion > dt > a').click(function() {
+
+        allPanels.slideUp();
+
+        $(this).filter('.open').removeClass('open').addClass('closing')
+        $('.accordion > dt > a').removeClass('open');
+      $(this).not(".closing").addClass('open').parent().next().slideDown();
+        $('.accordion > dt > a').removeClass('closing');
+
+        return false;
+      });
+    });
 
 ---

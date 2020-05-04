@@ -27,6 +27,53 @@ a{
   text-decoration: none;
     color: inherit;
 }
+/* We have created lots of different button styles, you probably don't need to have quite this many styles depending on your site */
+
+.button,
+.button-solid,
+.button-inverted {
+  text-decoration: none;
+  color: #e67e22;
+  border: 2px solid;
+  padding: 0.6rem 2rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.button:hover {
+  color: rgb(60, 60, 60);
+}
+
+.button.inverted {   /* this is for a button on a dark background */
+  border: 2px solid white;
+  color: white;
+}
+
+.button.inverted:hover {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+
+.button-solid {
+  background-color: #e67e22;
+  border-color: #e67e22;
+  color: white;
+}
+
+.button-solid:hover {
+  background-color: rgb(60, 60, 60);
+  border-color: rgb(60, 60, 60);
+}
+.button.demo{
+  display: block;
+  cursor: pointer;
+  width:auto;
+  margin:1rem auto;
+  text-align: center;
+}
 /* ------------- Utility Classes --------------  */
 
   .left     {  text-align: left;     }
