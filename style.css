@@ -1,0 +1,46 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(90, 90, 95);
+    /* padding: 4%; */
+    color: white;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+section{
+  padding: 4%
+}
+a{
+  text-decoration: none;
+    color: inherit;
+}
+
+.nav{
+  position: fixed;
+  background-color: #f9ca24;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 1%;
+  text-align: center;
+}
+header a{
+display: inline-block;
+    padding: 0.5rem;
+}
+.not-fixed{
+  position: relative;
+}
+
+.bg-white,.demo-info{
+  background: #fff;
+  color: #222
+}
+.demo-info{
+  display:none;
+}

@@ -1,0 +1,110 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <head>
+
+  <!-- Meta Data -->
+<meta charset="utf-8">
+
+    <!-- Meta data for SEO purposes. -->
+    <title> IOC Modular Blocks </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- meta data to tell the browser that your devide is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!--  Social media sharing META Tags -->
+    <meta property="og:title" content="IOC Modular Blocks">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="/blocks">
+    <meta name="twitter:card" content="">
+    <meta name="og:site_name" content="<!-- ADD SITE NAME HERE -->">
+
+<!-- end of meta tags -->
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+
+<!-- Gridlex -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+
+<!-- Font Awesome Version 5 for Icons  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+
+<!-- Magnific Popup for lightbox galleries   -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous" defer></script>
+
+<!-- our own custom stylesheet -->
+<link rel="stylesheet" href="/style.css">
+
+<!-- Google Analytics -->
+
+    <!-- paste your google analytics code here -->
+
+<!-- end google analytics -->
+
+  <meta name="robots" content="noindex">
+
+</head>
+
+  <body>
+    <header class="nav">
+      {% for block in site.blocks %}
+        {% if block.header-bar-link %}
+          <a href="/#{{block.header-bar-link}}">{{block.header-bar-link}}</a>
+        {% endif %}
+      {% endfor %}
+    </header>
+    <header class="nav not-fixed">
+      {% for block in site.blocks %}
+        {% if block.header-bar-link %}
+          <a href="/#{{block.header-bar-link}}">{{block.header-bar-link}}</a>
+        {% endif %}
+      {% endfor %}
+    </header>
+
+    {% for block in site.blocks %}
+    <section id="{{forloop.index}}-section">
+      <h2>{{block.title}}</h2>
+      <style media="screen">
+        {{block.css}}
+      </style>
+      <div class="bg-white">
+        {{block.html}}
+      </div>
+      <a href="#" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Read more</a>
+      <div class="demo-info">
+        <h3>HTML</h3>
+        <pre>
+          {{block.html | replace: "<", "< "}}
+        </pre>
+          {% if block.css  != "" %}
+          <h3>CSS</h3>
+          <code>
+            {{block.css}}
+          </code>
+        {% endif %}
+
+          {% if block.js != "" %}
+          <h3>JS</h3>
+          <code>
+            {{block.js}}
+          </code>
+        {% endif %}
+      </div>
+    </section>
+    {% endfor %}
+
+  </body>
+</html>
