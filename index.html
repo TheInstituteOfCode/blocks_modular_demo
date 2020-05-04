@@ -62,7 +62,7 @@
     <header class="nav">
       {% for block in site.blocks %}
         {% if block.header-bar-link %}
-          <a href="/#{{block.header-bar-link}}">{{block.header-bar-link}}</a>
+          <a href="/#{{forloop.index}}-section">{{block.header-bar-link}}</a>
         {% endif %}
       {% endfor %}
     </header>

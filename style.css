@@ -13,6 +13,9 @@ body{
 section{
   padding: 4%
 }
+img{
+  max-width:100%;
+}
 a{
   text-decoration: none;
     color: inherit;
@@ -37,6 +40,7 @@ display: inline-block;
 }
 .not-fixed{
   position: relative;
+  z-index: -5;
 }
 
 .bg-white,.demo-info{
