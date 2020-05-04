@@ -83,25 +83,32 @@
       <div class="bg-white">
         {{block.html_code_block}}
       </div>
-      <a href="#" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Read more</a>
+      <a href="#" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Show Code </a>
       <div class="demo-info">
-        <h3>HTML</h3>
-        <pre>
-          {{block.html_code_block | replace: "<", "< "}}
-        </pre>
+        <div class="padded">
+          <h3>HTML</h3>
+          <pre>
+            {{block.html_code_block | replace: "<", "< "}}
+          </pre>
+        </div>
+        <div class="padded">
+
           {% if block.css  != "" %}
           <h3>CSS</h3>
-          <code>
+          <pre>
             {{block.css_code_block}}
-          </code>
-        {% endif %}
+          </pre>
+          {% endif %}
+        </div>
+        <div class="padded">
 
           {% if block.js != "" %}
           <h3>JS</h3>
-          <code>
+          <pre>
             {{block.js_code_block}}
-          </code>
-        {% endif %}
+          </pre>
+          {% endif %}
+        </div>
       </div>
     </section>
     {% endfor %}
