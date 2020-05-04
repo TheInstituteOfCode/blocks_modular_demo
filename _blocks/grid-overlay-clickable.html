@@ -40,10 +40,36 @@ html_code_block: |
   </section>
 css_code_block: |
 
-  section, header, footer {
-    position: relative;
-    background-color: white;
-    color: rgb(90, 90, 90);
+  .bg-image {
+    background-image: url('/images/adventure.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 10rem;
+  }
+  /* clickable boxes */
+
+  .clickable-box {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 rgba(0, 0, 0, 0); /* so that we can add a transition */
+    transition: 0.2s all;
+    display: block;
+  }
+
+  .clickable-box .overlay {
+    min-height:10rem;
+    padding: 5rem 2rem;
+    background-color: rgba(0,0,10,0.6);
+    color: white;
+  }
+
+  .clickable-box p {
+    margin-bottom: 0;
+  }
+
+  .clickable-box:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+    margin-top:-2px;
   }
 
 js_code_block: |

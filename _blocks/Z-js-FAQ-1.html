@@ -24,11 +24,41 @@ html_code_block: |
     </section>
 css_code_block: |
 
-  section, header, footer {
-    position: relative;
-    background-color: white;
-    color: rgb(90, 90, 90);
+  .accordion dt a {
+  padding: 0.25rem;
+  margin: 0.25rem 0;
+  display:block;
+  color: #e67e22;
+  position: relative;
+  text-decoration: none;
   }
+  .accordion dd {
+  padding: 0.5rem;
+  }
+
+  /* Accordian Icon */
+  .accordion dt a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+  }
+
+  /* NEED DANIELs HELP to stop auto popping back open, and make the thing twist */
+  .accordion dt a::after {
+  content: "+";
+  }
+  .open::after {
+  transform: rotateZ(45deg);
+  }
+
 
 js_code_block: |
 

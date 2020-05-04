@@ -48,7 +48,32 @@ html_code_block: |
     </section>
 css_code_block: |
 
-  .no-bullets { list-style:none; } /* Used to remove dot-points from a list */
+  .no-bullets { list-style:none; }
+  /* Used to remove dot-points from a list */
+  .card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  .card.featured {
+    border: 2px solid orange;
+  }
+
+  .price {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .pricing-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(120,120,125);
+  }
+
+  .card .button {
+    margin-top:2rem;
+  }
 
 js_code_block: |
 

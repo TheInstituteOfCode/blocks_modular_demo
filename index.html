@@ -43,16 +43,23 @@
 <!-- Magnific Popup for lightbox galleries   -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous" defer></script>
-
 <!-- our own custom stylesheet -->
 <link rel="stylesheet" href="/style.css">
 
 <!-- Google Analytics -->
 
-    <!-- paste your google analytics code here -->
+<!-- paste your google analytics code here -->
 
 <!-- end google analytics -->
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous" defer></script>
+
+<!-- magnific-popup -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<script src="/assets/main.js" defer></script>
+
 
   <meta name="robots" content="noindex">
 
@@ -78,7 +85,7 @@
     <section id="{{forloop.index}}-section">
       <h2>{{block.heading}}</h2>
       <style media="screen">
-        {{block.css}}
+        {{block.css_code_block}}
       </style>
       <div class="bg-white">
         {{block.html_code_block}}

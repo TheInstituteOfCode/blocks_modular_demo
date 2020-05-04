@@ -40,11 +40,30 @@ html_code_block: |
   </section>
 css_code_block: |
 
-  section, header, footer {
-    position: relative;
-    background-color: white;
-    color: rgb(90, 90, 90);
+  .masonry { /* Masonry container */
+    column-count: 3;
+    column-gap: 1rem;
   }
+
+  .masonry .item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  @media(max-width:767px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+
+  @media(max-width:567px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+
 
 js_code_block: |
 

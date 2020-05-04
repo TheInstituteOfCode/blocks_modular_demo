@@ -25,10 +25,29 @@ html_code_block: |
   </section>
 css_code_block: |
 
-  section, header, footer {
-    position: relative;
-    background-color: white;
-    color: rgb(90, 90, 90);
+  .arrow { /* this is the arrow button */
+    font-size: 1.5rem;
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.5rem;
+    min-width: 2.5rem;
+    border: 1px solid #e67e22;
+    padding: 0.5rem;
+    border-radius: 100%;
+    text-decoration: none;
+    color: #e67e22;
+    margin-top: 0.5rem;
+  }
+  .arrow:hover {
+    color: rgb(60, 60, 60);
+    border-color: rgb(60, 60, 60);
+  }
+  .bg-image {
+    background-image: url('/images/adventure.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 10rem;
   }
 
 js_code_block: |

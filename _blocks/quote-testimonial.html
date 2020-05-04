@@ -40,10 +40,25 @@ html_code_block: |
   </section>
 css_code_block: |
 
-  section, header, footer {
-    position: relative;
+  .card {
+    padding: 2rem;
     background-color: white;
-    color: rgb(90, 90, 90);
+    border-radius: 5px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  .profile {
+    max-width: 8rem;
+    border-radius: 100%;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  .card .author {
+    font-weight: bold;
+    margin-bottom:0;
+  }
+
+  .card .company {
+    margin-bottom: 2rem;
   }
 
 js_code_block: |
