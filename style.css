@@ -79,6 +79,7 @@ a{
   .left     {  text-align: left;     }
   .right    {  text-align: right;    }
   .centered {  text-align: center;   }
+  .capatilised{text-transform: capitalize;}
 
   .padded   {  padding: 5%;    }
   .padded-1 {  padding: 1rem;  }

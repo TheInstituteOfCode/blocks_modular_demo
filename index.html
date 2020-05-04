@@ -67,23 +67,23 @@
 
   <body>
     <header class="nav">
-      {% for block in site.blocks %}
+      {% for block in site.blocks | sort:"title" %}
         {% if block.header-bar-link %}
-          <a href="/#{{forloop.index}}-section">{{block.header-bar-link}}</a>
+          <a href="/#{{forloop.index}}-section" class="capatilised">{{block.header-bar-link}}</a>
         {% endif %}
       {% endfor %}
     </header>
     <header class="nav not-fixed">
-      {% for block in site.blocks %}
+      {% for block in site.blocks | sort:"title" %}
         {% if block.header-bar-link %}
-          <a href="/#{{block.header-bar-link}}">{{block.header-bar-link}}</a>
+          <a href="/#{{block.header-bar-link}}" class="capatilised">{{block.header-bar-link}}</a>
         {% endif %}
       {% endfor %}
     </header>
 
     {% for block in site.blocks %}
     <section id="{{forloop.index}}-section">
-      <h2>{{block.heading}}</h2>
+      <h2 class="capatilised">{{block.heading}}</h2>
       <style media="screen">
         {{block.css_code_block}}
       </style>
@@ -91,15 +91,15 @@
         {{block.html_code_block}}
       </div>
       <a class="demo button" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Show Code </a>
-      <div class="demo-info">
-        <div class="padded">
+      <div class="demo-info padded">
+        <div>
           <h3>HTML</h3>
           <pre>
             {{block.html_code_block | replace: "<", "&#60;"}}
           </pre>
         </div>
         {% if block.css_code_block %}
-        <div class="padded">
+        <div>
           <h3>CSS</h3>
           <pre>
             {{block.css_code_block}}
@@ -108,7 +108,7 @@
         {% endif %}
 
         {% if block.js_code_block %}
-        <div class="padded">
+        <div>
           <h3>JS</h3>
           <pre>
             {{block.js_code_block}}
