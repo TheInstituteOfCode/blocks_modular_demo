@@ -36,7 +36,7 @@
 
 </script>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,500,700,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 
 <!-- Gridlex -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
@@ -73,28 +73,34 @@
     <header class="nav">
       {% for block in site.blocks %}
         {% if block.header-bar-link %}
-          <a href="/#{{forloop.index}}-section" class="capatilised">{{block.header-bar-link}}</a>
+          <a href="/#{{forloop.index}}-section" class="caps">{{block.header-bar-link}}</a>
         {% endif %}
       {% endfor %}
     </header>
     <header class="nav not-fixed">
       {% for block in site.blocks  %}
         {% if block.header-bar-link %}
-          <a href="/#{{block.header-bar-link}}" class="capatilised">{{block.header-bar-link}}</a>
+          <a href="/#{{block.header-bar-link}}" class="caps">{{block.header-bar-link}}</a>
         {% endif %}
       {% endfor %}
     </header>
 
     {% for block in site.blocks %}
     <section id="{{forloop.index}}-section">
-      <h2 class="capatilised">{{block.heading}}</h2>
       <style media="screen">
         {{block.css_code_block}}
       </style>
-      <div class="bg-white">
+      <div class="bg-white example-block">
         {{block.html_code_block}}
       </div>
-      <a class="demo button" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Show Code </a>
+
+      <div class="heading-block grid-spaceBetween">
+        <h2 class="col">{{block.heading}}</h2>
+        <div class="col right">
+          <a class="demo button" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Show Code </a>
+        </div>
+      </div>
+
       <div class="demo-info padded">
         <div>
           <h3>HTML</h3>
