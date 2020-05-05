@@ -13,23 +13,30 @@ html_code_block: |
     <!-- column -->
     <div class="col-6_sm-12-middle padded right">
       <nav class="inline">
-        <a href="#"> Lorem ipsum </a>|
-        <a href="#"> Dolor sit </a>|
-        <a href="#"> Consectetur </a>
+        <a href="#" class="padded"> Lorem ipsum </a>|
+        <a href="#" class="padded"> Dolor sit </a>|
+        <a href="#" class="padded"> Consectetur </a>
       </nav>
       <nav class="inline socials">
-        <a href="#">
+        <a href="#" class="padded">
           <i class="fab fa-facebook-square"></i>
         </a>
-        <a href="#">
+        <a href="#" class="padded">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="#">
+        <a href="#" class="padded">
           <i class="fab fa-youtube"></i>
         </a>
       </nav>
     </div>
   </footer>
+css_code_block: |
 
+  footer nav a {
+    display:block;
+  }
+  .inline a{
+    display:inline;
+  }
 
 ---
