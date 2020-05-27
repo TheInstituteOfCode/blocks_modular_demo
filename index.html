@@ -124,5 +124,137 @@
         {% endif %}
       </section>
     {% endfor %}
+    
+    
+    
+    <section id="universal-styles"> 
+    
+        
+        <div class="heading-block grid-spaceBetween">
+        <h2 class="col">Universal Styles</h2>
+        <div class="col right">
+          <a class="demo button" onclick="$('#universal-styles .demo-info').slideToggle()">Show Code </a>
+        </div>
+      </div>
+
+      <div class="demo-info padded">
+         <pre>
+            <code class="language-css">
+            
+            * {
+              padding: 0;
+              margin:0;
+              box-sizing: border-box;
+            }
+            
+            img {
+              max-width:100%;
+            }
+            a {
+              text-decoration: none;
+                color: inherit;
+            }
+            /* We have created lots of different button styles, you probably don't need to have quite this many styles depending on your site */
+            
+            .button,
+            .button-solid,
+            .button-inverted {
+              text-decoration: none;
+              color: rgb(120,120,130);
+              border: 2px solid;
+              padding: 0.6rem 2rem;
+              margin-top: 1rem;
+              display: inline-block;
+              text-transform: uppercase;
+              font-size: 0.9rem;
+              font-weight: 500;
+            }
+            
+            .button:hover {
+              color: rgb(60, 60, 60);
+            }
+            
+            .button.inverted {   /* this is for a button on a dark background */
+              border: 2px solid white;
+              color: white;
+            }
+            
+            .button.inverted:hover {
+              color: #e67e22;
+              border-color: #e67e22;
+            }
+            
+            .button-solid {
+              background-color: #e67e22;
+              border-color: #e67e22;
+              color: white;
+            }
+            
+            .button-solid:hover {
+              background-color: rgb(60, 60, 60);
+              border-color: rgb(60, 60, 60);
+            }
+            
+            /* ------------- Utility Classes --------------  */
+            
+              .left     {  text-align: left;     }
+              .right    {  text-align: right;    }
+              .centered {  text-align: center;   }
+              .caps{text-transform: capitalize;}
+            
+              .padded   {  padding: 5%;    }
+              .padded-1 {  padding: 1rem;  }
+              .padded-2 {  padding: 2rem;  }
+            
+              .capped-width { width: 80%; margin: auto;}
+            
+              .tall-50  {  min-height: 50vh;   }
+              .tall-100 {  min-height: 100vh;  }
+            
+              .dark-bg      {  background-color: rgb(90, 90, 95);     }
+              .light-bg     {  background-color: rgb(240, 240, 245);  }
+              .featured-bg  {  background-color: #ffeaa7;             }
+            
+              .light-text   { color: white; }
+              .flex-flip:nth-child(2n){  flex-direction: row-reverse; }
+            
+              /* General typography */
+            
+              h2, h3, h4, h5, h6 {
+                line-height: 1;
+                margin-bottom: 0.8rem;
+              }
+            
+              h2  { font-size: 2.2rem;  }
+              h3  { font-size: 1.8rem;  }
+              h4  { font-size: 1.4rem;  }
+              p   { font-size: 1rem;  }
+            
+              p, ul {
+                 margin-bottom: 0.8rem;
+              }
+            
+              /* this makes sure that the last element in any container doesn't have margin-bottom */
+              h2:last-child,
+              h3:last-child,
+              h4:last-child,
+              h5:last-child,
+              h6:last-child,
+              p:last-child {
+                margin-bottom:0;
+              }
+            
+              hr { /* this is a line element */
+                border: none;
+                border-bottom: 3px solid;
+                width: 4rem;
+                margin-bottom: 1rem;
+              }
+  
+        </code>
+        </pre>
+      </div>
+    </section>
+    
   </body>
 </html>
