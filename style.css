@@ -12,8 +12,13 @@ body{
     /* padding: 4%; */
     font-family: 'Nunito Sans', sans-serif;
 }
+
 body > section{
   padding: 4%
+}
+
+.example-block {
+    font-family: 'Noto Sans HK', sans-serif;
 }
 
 
