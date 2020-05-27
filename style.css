@@ -81,7 +81,7 @@ a{
   padding: 1rem;
   text-transform: uppercase;
   font-weight: normal;
-  color: rgb(120,120,130);
+  color: rgb(140, 140, 150);
   font-size: 1.2rem;
 }
 
@@ -90,6 +90,7 @@ a{
   font-size: 0.9rem;
   border-radius: 2px;
   cursor: pointer;
+  color:color: rgb(140, 140, 150);
 }
 /* ------------- Utility Classes --------------  */
 
