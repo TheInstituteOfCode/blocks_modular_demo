@@ -1,8 +1,4 @@
-*{
-  padding: 0;
-  margin:0;
-  box-sizing: border-box;
-}
+
 /* this overrides the default padding and margin on gridlex elements */
 [class*=grid] {   margin: 0;  }
 [class*=col]  {   padding: 0; }
@@ -19,10 +15,18 @@ body{
 body > section{
   padding: 4%
 }
-img{
+
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+img {
   max-width:100%;
 }
-a{
+a {
   text-decoration: none;
     color: inherit;
 }
@@ -67,31 +71,6 @@ a{
   border-color: rgb(60, 60, 60);
 }
 
-/* DEMO STYLES  */
-
-.nav a {
-
-}
-
-.example-block {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.heading-block h2 {
-  padding: 1rem;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: rgb(140, 140, 150);
-  font-size: 1.2rem;
-}
-
-.button.demo{
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  border-radius: 2px;
-  cursor: pointer;
-  color:color: rgb(140, 140, 150);
-}
 /* ------------- Utility Classes --------------  */
 
   .left     {  text-align: left;     }
@@ -147,6 +126,36 @@ a{
     width: 4rem;
     margin-bottom: 1rem;
   }
+  
+  
+  
+/* DEMO STYLES  */
+
+.nav a {
+
+}
+
+.example-block {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.heading-block h2 {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: rgb(140, 140, 150);
+  font-size: 1.2rem;
+}
+
+.button.demo{
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  cursor: pointer;
+  color:color: rgb(140, 140, 150);
+}
+
+  
 .nav{
   position: fixed;
   background-color: rgb(60,60,65);
