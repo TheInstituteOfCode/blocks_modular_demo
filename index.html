@@ -86,6 +86,29 @@
         {% endif %}
       {% endfor %}
     </header>
+    
+    
+<section id="universal-styles"> 
+
+
+<div class="heading-block grid-spaceBetween">
+    <h2 class="col">Universal Styles</h2>
+    <div class="col right">
+        <a class="demo button" onclick="$('#universal-styles .demo-info').slideToggle()">Show Code </a>
+    </div>
+</div>
+
+<div class="demo-info padded">
+<pre>
+<code class="language-css">
+{% include universal-styles.html %}
+</code>
+</pre>
+</div>
+</section>
+
+    
+    
 
     {% for block in site.blocks %}
     <section id="{{forloop.index}}-section">
@@ -127,24 +150,7 @@
     
     
     
-    <section id="universal-styles"> 
-    
-        
-    <div class="heading-block grid-spaceBetween">
-        <h2 class="col">Universal Styles</h2>
-        <div class="col right">
-          <a class="demo button" onclick="$('#universal-styles .demo-info').slideToggle()">Show Code </a>
-        </div>
-      </div>
 
-      <div class="demo-info padded">
-<pre>
-<code class="language-css">
-{% include universal-styles.html %}
-</code>
-</pre>
-      </div>
-    </section>
     
   </body>
 </html>
