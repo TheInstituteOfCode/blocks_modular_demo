@@ -1,156 +1,73 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <head>
 
-  <!-- Meta Data -->
-<meta charset="utf-8">
+<style> {% include universal-styles.html %} </style>
 
-    <!-- Meta data for SEO purposes. -->
-    <title> IOC Modular Blocks </title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-    <!-- meta data to tell the browser that your devide is responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <!--  Social media sharing META Tags -->
-    <meta property="og:title" content="IOC Modular Blocks">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="/blocks">
-    <meta name="twitter:card" content="">
-    <meta name="og:site_name" content="<!-- ADD SITE NAME HERE -->">
-
-<!-- end of meta tags -->
-
-<!-- code styling css and js-->
-<link rel="stylesheet" href="/assets/prism_beige.css">
-<!-- <link rel="stylesheet" href="/assets/prism.css"> -->
-
-<script type="text/javascript" src="/assets/prism.js" defer>
-
-</script>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<!-- Gridlex -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-
-<!-- Font Awesome Version 5 for Icons  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
-
-<!-- Magnific Popup for lightbox galleries   -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
-
-<!-- our own custom stylesheet -->
-<link rel="stylesheet" href="/style.css">
-
-<!-- Google Analytics -->
-
-<!-- paste your google analytics code here -->
-
-<!-- end google analytics -->
-
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous" defer></script>
-
-<!-- magnific-popup -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" defer></script>
-
-<script src="/assets/main.js" defer></script>
-
-
-  <meta name="robots" content="noindex">
-
-</head>
-
-  <body>
-    <header class="nav">
-      {% for block in site.blocks %}
-        {% if block.header-bar-link %}
-          <a href="/#{{forloop.index}}-section" class="caps">{{block.header-bar-link}}</a>
-        {% endif %}
-      {% endfor %}
-    </header>
-    <header class="nav not-fixed">
-      {% for block in site.blocks  %}
-        {% if block.header-bar-link %}
-          <a href="/#{{block.header-bar-link}}" class="caps">{{block.header-bar-link}}</a>
-        {% endif %}
-      {% endfor %}
-    </header>
-    
-    
-<section id="universal-styles"> 
-
-
-<div class="heading-block grid-spaceBetween">
+<section id="universal-styles">
+  <div class="heading-block grid-spaceBetween">
     <h2 class="col">Universal Styles</h2>
     <div class="col right">
-        <a class="demo button" onclick="$('#universal-styles .demo-info').slideToggle()">Show Universal Styles</a>
+      <a class="demo button" onclick="$('#universal-styles .demo-info').slideToggle()">Show Universal Styles</a>
     </div>
-</div>
+  </div>
 
-<div class="demo-info padded">
-<pre>
-<code class="language-css">
-{% include universal-styles.html %}
-</code>
-</pre>
-</div>
+  <div class="demo-info padded">
+    <pre>
+  <code class="language-css">
+  {% include universal-styles.html %}
+  </code>
+  </pre>
+  </div>
 </section>
 
+{% for block in site.blocks %}
+<section id="{{forloop.index}}-section">
+  <style media="screen">
+    {{block.css_code_block}}
+  </style>
+  <div class="bg-white example-block">
+    {{block.html_code_block}}
+  </div>
 
+  <div class="heading-block grid-spaceBetween">
+    <h2 class="col">{{block.heading}}</h2>
+    <div class="col right">
+      <a class="demo button" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Show Code </a>
+    </div>
+  </div>
 
-
-    {% for block in site.blocks %}
-    <section id="{{forloop.index}}-section">
-      <style media="screen">
-        {{block.css_code_block}}
-      </style>
-      <div class="bg-white example-block">
-        {{block.html_code_block}}
-      </div>
-
-      <div class="heading-block grid-spaceBetween">
-        <h2 class="col">{{block.heading}}</h2>
-        <div class="col right">
-          <a class="demo button" onclick="$('#{{forloop.index}}-section .demo-info').slideToggle()">Show Code </a>
-        </div>
-      </div>
-
-      <div class="demo-info padded">
-        <div>
-          <h3>HTML</h3>
-          <pre>
+  <div class="demo-info padded">
+    <div>
+      <h3>HTML</h3>
+      <pre>
             <code class="language-html">
               {{block.html_code_block | replace: "<", "&#60;"}}
             </code>
           </pre>
-        </div>
-        {% if block.css_code_block %}
-        <div>
-          <h3>CSS</h3>
-          <pre>
+    </div>
+    {% if block.css_code_block %}
+    <div>
+      <h3>CSS</h3>
+      <pre>
             <code class="language-css">
               {{block.css_code_block}}
             </code>
           </pre>
-        </div>
-        {% endif %}
-      </section>
-    {% endfor %}
-    
-    
-    
+    </div>
+    <style> {{block.css_code_block}} </style>
+    {% endif %}
 
-    
-  </body>
-</html>
+    {% if block.js_code_block %}
+    <div>
+      <h3>JS</h3>
+      <pre>
+            <code class="language-js">
+              {{block.js_code_block}}
+            </code>
+          </pre>
+    </div>
+    {% endif %}
+
+</section>
+{% endfor %}

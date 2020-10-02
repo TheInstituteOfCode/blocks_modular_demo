@@ -5,53 +5,57 @@ html_code_block: |
 
   <section class="padded centered">
 
-  <h2> Our Clients </h2>
+  <h2> Popup Gallery </h2>
   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     <div class="popup-gallery grid-center padded-1">
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-1.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-1.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-7.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-7.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-3.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-3.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-4.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-4.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-5.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-5.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-6.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-6.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/adventure.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/adventure.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-2.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-2.jpg')"></div>
       </a>
 
-      <a class="col-3_sm-6_xs-12" href="/images/pencils.jpg" heading="this is where you write the caption">
-        <div class="bg-image" style="background-image:url('/images/pencils.jpg')"></div>
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-8.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-8.jpg')"></div>
       </a>
 
     </div>
 
   </section>
+
 css_code_block: |
 
   .bg-image {
-    background-image: url('/images/adventure.jpg');
+    background-color: rgb(235,235,235);
     background-size: cover;
     background-position: center;
-    min-height: 10rem;
+  }
+
+  .square {
+    padding-bottom: 100%;
   }
 
   .popup-gallery .bg-image {
@@ -60,22 +64,17 @@ css_code_block: |
 js_code_block: |
 
   $(document).ready(function() {
-    $('.popup-gallery').magnificPopup({
-  		delegate: 'a',
-  		type: 'image',
-  		tLoading: 'Loading image #%curr%...',
-  		mainClass: 'mfp-img-mobile',
-  		gallery: {
-  			enabled: true,
-  			navigateByImgClick: true,
-  			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-  		},
-  		image: {
-  			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-  			titleSrc: function(item) {
-  				return item.el.attr('title');
-  			}
-  		}
-  	});
+
+    // This is the pop-up gallery
+    $('[data-fancybox="gallery"]').fancybox({
+      protect: true,
+      keyboard: true,
+      arrows: true,
+      infobar: false,
+      buttons: [
+      "close"
+      ],
+    });
+
   });
 ---

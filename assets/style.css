@@ -350,6 +350,27 @@
     background-position: center;
     min-height: 10rem;
   }
+
+  /* Image Sizes  */
+
+    /* IG Story  */
+  .portrait-tall {
+    padding-bottom: 175%;
+  }
+    /* 4:5 IG Post */
+  .portrait {
+    padding-bottom: 125%;
+  }
+
+  .square {
+    padding-bottom: 100%;
+  }
+
+  .landscape {
+    padding-bottom: 60%;
+  }
+
+
   /* Hover grid */
 
   .hover-container {
