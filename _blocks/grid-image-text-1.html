@@ -4,50 +4,57 @@ heading: Image & Text Grid 1
 html_code_block: |
 
   <section class="light-bg">
-    <div class="grid  flex-flip">
-      <div class="col-6_sm-12 bg-image">
+    <div class="grid flex-flip">
+      <div class="col-6_sm-12">
+        <div class="bg-image landscape bg-yoga"></div>
       </div>
       <div class="col-6_sm-12-middle padded">
         <h3> This this a heading </h3>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <a class="arrow" href="#"> > </a>
+        <a class="subtle-button" href="#"> Read More > </a>
       </div>
     </div>
     <div class="grid flex-flip">
-      <div class="col-6_sm-12 bg-image">
+      <div class="col-6_sm-12">
+        <div class="bg-image landscape bg-wellness"></div>
       </div>
       <div class="col-6_sm-12-middle padded">
         <h3> This this a heading </h3>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <a class="arrow" href="#"> > </a>
+        <a class="subtle-button" href="#"> Explore > </a>
       </div>
     </div>
   </section>
 css_code_block: |
 
-  .arrow { /* this is the arrow button */
-    font-size: 1.5rem;
-    display: inline-block;
-    text-align: center;
-    font-weight: 300;
-    line-height: 1.5rem;
-    min-width: 2.5rem;
-    border: 1px solid #e67e22;
-    padding: 0.5rem;
-    border-radius: 100%;
-    text-decoration: none;
-    color: #e67e22;
-    margin-top: 0.5rem;
+  .subtle-button { /* this is the arrow button */
+    color: rgb(120,120,125);
+    padding: 0.3rem;
+    padding-left: 0;
+    font-weight: bold;
   }
-  .arrow:hover {
+  .subtle-button:hover {
     color: rgb(60, 60, 60);
     border-color: rgb(60, 60, 60);
   }
+
   .bg-image {
-    background-image: url('/images/adventure.jpg');
+    background-color: rgb(235,235,235);
     background-size: cover;
     background-position: center;
     min-height: 10rem;
+  }
+
+  .landscape {
+    padding-bottom: 60%;
+  }
+
+  .bg-yoga {
+    background-image:url('/images/wellness-3.png');
+  }
+
+  .bg-wellness {
+    background-image:url('/images/wellness-4.png');
   }
 
 ---

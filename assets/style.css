@@ -345,7 +345,6 @@
   }
 
   .bg-image {
-    background-image: url('/images/adventure.jpg');
     background-size: cover;
     background-position: center;
     min-height: 10rem;
