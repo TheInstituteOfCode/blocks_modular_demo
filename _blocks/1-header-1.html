@@ -1,25 +1,20 @@
 ---
+layout: default
 header-bar-link: Header
 heading: header 1
 html_code_block: |
 
-  <header class="grid">
-    <div class="col-4-middle">
-      <a href="/">
-        <h2 class="logo"> LOGO </h2>
-      </a>
-    </div>
-    <nav class="col-8-middle right">
-      <a href="#"> Headers </a>
-      <a href="#"> Banners </a>
-      <a href="#"> Link </a>
-      <a href="#"> Link </a>
-    </nav>
-  </header>
-
-css_code_block: |
-
-    header {
-      padding: 1% 5%;
-    }
+        <header class="flex justify-between">
+          <div class="grow flex items-center gap-8">
+              <a href="/">
+                  <h2 class="logo inline-block"> LOGO </h2>
+              </a>
+              <a href="#"> Headers </a>
+              <a href="#"> Banners </a>
+              <a href="#"> Link </a>
+          </div>
+          <nav class="grow text-right">
+            <a href="#" class="button"> Link </a>
+          </nav>
+        </header>
 ---

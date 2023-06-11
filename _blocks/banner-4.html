@@ -1,0 +1,30 @@
+---
+layout: default
+header-bar-link:
+heading: banner 4
+html_code_block: |
+
+      <section class=" flex justify-center items-center banner min-h-80 relative">
+        <div class="center p-8 text-slate-800 z-10">
+          <h2 class="text-9xl span-underlines mb-8"> <span>This this a</span> </br> <span>heading</span> </h2>
+          <h3 class="text-5xl text-white"> This is a sub-heading </h3>
+          <a href="/" class="p-2 absolute bottom-5p right-5p bg-white">BOOK NOW</a>
+        </div>
+      </section>
+css_code_block: |
+
+        .span-underlines span{
+          position: relative;
+          /* display: block; */
+        }
+        .span-underlines span::before{
+          content: ' ';
+          position: absolute;
+          background: #fff;
+          width: 100%;
+          height: 50%;
+          top: 50%;
+          z-index: -1;
+          border-radius: 100rem;
+        }      
+---

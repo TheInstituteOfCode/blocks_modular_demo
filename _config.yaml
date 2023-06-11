@@ -1,3 +1,4 @@
 collections:
   blocks:
+    output: true
   js:

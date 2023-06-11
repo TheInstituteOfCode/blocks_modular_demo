@@ -1,7 +1,13 @@
 
-/* this overrides the default padding and margin on gridlex elements */
-[class*=grid] {   margin: 0;  }
-[class*=col]  {   padding: 0; }
+/* ----------- Color Variables --------- */
+/* Looking for the color variables? They have been moved to the inline-styles file in the _includes folder, and pull variables from the site-settings folder in the _data folder.  */
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
 
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
@@ -35,11 +41,18 @@ a {
   text-decoration: none;
     color: inherit;
 }
+
+
+.banner{
+  background-image: url("https://picsum.photos/id/1020/600/400");
+  background-position: center;
+  background-size: cover;
+}
 /* We have created lots of different button styles, you probably don't need to have quite this many styles depending on your site */
 
-.button,
-.button-solid,
-.button-inverted {
+ .demo.button,
+ .demo.button-solid,
+ .demo.button-inverted {
   text-decoration: none;
   color: rgb(120,120,130);
   border: 2px solid;
@@ -51,11 +64,12 @@ a {
   font-weight: 500;
 }
 
-.button:hover {
+.demo.button:hover {
   color: rgb(60, 60, 60);
-}
-
-.button.inverted {   /* this is for a button on a dark background */
+} 
+/*
+this is for a button on a dark background 
+.button.inverted {   
   border: 2px solid white;
   color: white;
 }
@@ -74,11 +88,11 @@ a {
 .button-solid:hover {
   background-color: rgb(60, 60, 60);
   border-color: rgb(60, 60, 60);
-}
+} */
 
 /* ------------- Utility Classes --------------  */
 
-  .left     {  text-align: left;     }
+  /* .left     {  text-align: left;     }
   .right    {  text-align: right;    }
   .centered {  text-align: center;   }
   .caps{text-transform: capitalize;}
@@ -97,7 +111,7 @@ a {
   .featured-bg  {  background-color: #ffeaa7;             }
 
   .light-text   { color: white; }
-  .flex-flip:nth-child(2n){  flex-direction: row-reverse; }
+  .flex-flip:nth-child(2n){  flex-direction: row-reverse; } */
 
   /* General typography */
 
@@ -116,7 +130,7 @@ a {
   }
 
   /* this makes sure that the last element in any container doesn't have margin-bottom */
-  h2:last-child,
+   h2:last-child,
   h3:last-child,
   h4:last-child,
   h5:last-child,
@@ -125,20 +139,19 @@ a {
     margin-bottom:0;
   }
 
-  hr { /* this is a line element */
+  /* this is a line element
+  hr { 
     border: none;
     border-bottom: 3px solid;
     width: 4rem;
     margin-bottom: 1rem;
-  }
+  } */
 
 
 
 /* DEMO STYLES  */
+/*   */
 
-.nav a {
-
-}
 
 .example-block {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
@@ -157,7 +170,7 @@ a {
   font-size: 0.9rem;
   border-radius: 2px;
   cursor: pointer;
-  color:color: rgb(140, 140, 150);
+  color: rgb(140, 140, 150);
 }
 
 
@@ -168,7 +181,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 100;
   margin: 0;
   padding: 1%;
   text-align: center;
@@ -188,4 +201,4 @@ display: inline-block;
 }
 .demo-info{
   display:none;
-}
+} 
