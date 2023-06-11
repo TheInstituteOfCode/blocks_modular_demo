@@ -2,17 +2,26 @@
 header-bar-link:
 heading: header 2
 html_code_block: |
-                    <header class="flex justify-between">
-                      <div class="grow flex items-center gap-8">
-                          <a href="/">
-                              <h2 class="logo inline-block"> LOGO </h2>
-                          </a>
-                      </div>
-                      <nav class="grow right">
-                          <a href="#"> Headers </a>
-                          <a href="#"> Banners </a>
-                          <a href="#"> Link </a>
-                        <a href="#" class="button"> Link </a>
-                      </nav>
-                    </header>
+
+  <header class="flex justify-center items-center px-[1%] py-5p">
+    <div class="grow">
+      <a href="/">
+        <h2 class="logo"> LOGO </h2>
+      </a>
+    </div>
+    <nav class="grow text-right">
+      <a href="#"> Link </a>
+      <a href="#"> Link </a>
+      <a href="#"> Link </a>
+      <a href="#" class="emphasis-button"> Call to Action </a>
+    </nav>
+  </header>
+
+css_code_block: |
+
+  .emphasis-button {
+    border: 2px solid;
+    margin-left: 0.5rem;
+  }
+
 ---

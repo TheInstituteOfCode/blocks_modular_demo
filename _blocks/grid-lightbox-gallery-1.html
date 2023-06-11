@@ -1,0 +1,80 @@
+---
+header-bar-link:
+heading: logo lightbox Gallery with captions
+html_code_block: |
+
+  <section class="padded centered">
+
+  <h2> Popup Gallery </h2>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    <div class="popup-gallery grid-center padded-1">
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-1.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-1.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-7.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-7.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-3.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-3.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-4.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-4.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-5.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-5.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-6.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-6.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-2.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-2.jpg')"></div>
+      </a>
+
+      <a class="col-3_sm-6_xs-12 fancybox" href="/images/wellness-8.jpg" data-fancybox="gallery">
+        <div class="bg-image square" style="background-image:url('/images/wellness-8.jpg')"></div>
+      </a>
+
+    </div>
+
+  </section>
+
+css_code_block: |
+
+  .bg-image {
+    background-color: rgb(235,235,235);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .square {
+    padding-bottom: 100%;
+  }
+
+  .popup-gallery .bg-image {
+    border: 2px solid white;
+  }
+js_code_block: |
+
+  $(document).ready(function() {
+
+    // This is the pop-up gallery
+    $('[data-fancybox="gallery"]').fancybox({
+      protect: true,
+      keyboard: true,
+      arrows: true,
+      infobar: false,
+      buttons: [
+      "close"
+      ],
+    });
+
+  });
+---

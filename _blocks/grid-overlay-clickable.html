@@ -1,0 +1,75 @@
+---
+header-bar-link:
+heading: Clickable Overlay Grid
+html_code_block: |
+
+  <section class="padded centered">
+    <h2> Our Services </h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    <div class="grid padded-1">
+
+      <div class="col-4_sm-12 padded-05">
+        <a href="#" class="clickable-box bg-image" style="background-image:url('/images/wellness-1.jpg')">
+          <div class="overlay padded light-text">
+            <h3> Social Media </h3>
+            <p> Something witty </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-4_sm-12 padded-05">
+        <a href="#" class="clickable-box bg-image" style="background-image:url('/images/wellness-2.jpg')">
+          <div class="overlay padded light-text">
+            <h3> Content Creation </h3>
+            <p> Something witty </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-4_sm-12 padded-05">
+        <a href="#" class="clickable-box bg-image" style="background-image:url('/images/wellness-3.jpg')">
+          <div class="overlay padded light-text">
+            <h3> Photo & Video </h3>
+            <p> Something witty </p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+css_code_block: |
+
+  .bg-image {
+    background-color: rgb(90,90,90);
+    background-size: cover;
+    background-position: center;
+  }
+  /* clickable boxes */
+
+  .clickable-box {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 rgba(0, 0, 0, 0); /* so that we can add a transition */
+    transition: 0.2s all;
+    display: block;
+  }
+
+  .clickable-box .overlay {
+    min-height: 12rem;
+    padding: 3rem 1rem;
+    background-color: rgba(0,0,10,0.4);
+    color: white;
+  }
+
+  .clickable-box p {
+    margin-bottom: 0;
+  }
+
+  .clickable-box:hover {
+    background-color: rgba(0,0,10,0.6);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+    margin-top:-2px;
+  }
+
+---

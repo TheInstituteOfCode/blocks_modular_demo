@@ -1,0 +1,75 @@
+---
+header-bar-link:
+heading: hover Grid
+html_code_block: |
+
+  <section class="padded centered">
+    <h2> Meet the team </h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    <div class="grid padded-1">
+      <div class="col-4_sm-12 padded-1">
+        <div class="hover-container" style="background-image:url('/images/headshot-3.png')">
+          <div class="hover-overlay">
+            <div class="hover-inner">
+              <h3> Joe </h3>
+              <p> Co-founder
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4_sm-12 padded-1">
+          <div class="hover-container" style="background-image:url('/images/headshot-2.png')">
+            <div class="hover-overlay">
+              <div class="hover-inner">
+                <h3> Suzie </h3>
+                <p> Developer </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4_sm-12 padded-1">
+          <div class="hover-container" style="background-image:url('/images/headshot-1.png')">
+            <div class="hover-overlay">
+              <div class="hover-inner">
+                <h3> Angie </h3>
+                <p> Admin </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+css_code_block: |
+
+  .hover-container {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hover-overlay {
+    position: relative;
+    padding-bottom: 100%;
+    color: rgba(255, 255, 255, 0);
+    position: relative;
+    /* you only need to use relative + absolute if you want to determine the exact aspect ratio of the container */
+    transition: all 0.3s;
+  }
+
+  .hover-overlay:hover {
+    background-color: rgba(60, 60, 60, 0.7);
+    color: white;
+  }
+
+  .hover-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .hover-inner p {
+    margin-bottom: 0;
+  }
+
+---

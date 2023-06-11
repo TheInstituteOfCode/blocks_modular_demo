@@ -1,0 +1,82 @@
+---
+header-bar-link:
+heading: Get in touch
+html_code_block: |
+
+  <section class="grid md:grid-cols-2 p-5p">
+    <div class="p-5p">
+      <h2> Get In Touch </h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p> <strong> Email: </strong> hello@company.com </p>
+      <p> <strong> Phone: </strong> 0412 555 555 </p>
+      <p> <strong> Facebook: </strong> fb.com/companyname </p>
+    </div>
+    <div class="self-center p-5p">
+      <form class="grid md:grid-cols-2  gap-2" action="https://formspree.io/hello@company.com" method="POST">
+        <div class="">
+          <input type="text" name="name" placeholder="Your Name">
+        </div>
+        <div class="">
+          <input type="email" name="_replyto" placeholder="Your Email">
+        </div>
+        <div class="col-span-full">
+          <textarea placeholder="Your Message"></textarea>
+          <input type="submit" value="Send" class="button">
+        </div>
+      </form>
+    </div>
+  </section>
+
+css_code_block: |
+
+  input, textarea {
+    border-style: solid;
+    border: 2px solid rgb(200, 200, 205);
+    padding: 0.8em;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    vertical-align: top;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 2px solid #e67e22;
+    /* featured color */
+  }
+
+  textarea {
+    min-height: 7em;
+  }
+
+  input[type="submit"] {
+    width: auto;
+    display: block;
+  }
+
+  .email-signup input {
+    width: 30%;
+    display: inline-block;
+    max-width: 250px;
+    margin-top:1rem;
+  }
+
+  .email-signup .button-solid {
+    padding: 0.8em;
+    border-radius: 0;
+    font-size: 1rem;
+  }
+  form .button {
+    width:100%;
+  }
+    @media(max-width:768px) {
+     .email-signup input {
+       width: 100%;
+       max-width: 100%;
+     }
+   }
+
+
+
+---

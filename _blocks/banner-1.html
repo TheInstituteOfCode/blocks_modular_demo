@@ -1,18 +1,21 @@
 ---
-layout: default
 header-bar-link: Banner
-heading: banner 1
+heading: banner 2
 html_code_block: |
-                    <section class="flex justify-center items-center banner bg-cover bg-center relative  min-h-80">
-                      <div class=" center">
-                        <h2 class="text-4xl"> This this a heading </h2>
-                        <h3 class="text-2xl"> This is a sub-heading </h3>
-                        <a href="/" class="button rounded-lg"> book now</a>
-                      </div>
-                      <svg width="100%" class="bottom-0 absolute left-0" viewBox="0 0 2192 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 79.3853C91.3333 79.3853 91.3333 0.00012153 182.687 0.000129516C274.041 0.000137502 274.02 79.3853 365.374 79.3853C456.728 79.3853 456.707 0.000153472 548.041 0.000161456C639.374 0.000169441 639.374 79.3854 730.707 79.3854C822.041 79.3854 822.041 0.00018541 913.374 0.000193395C1004.71 0.000201379 1004.71 79.3854 1096.04 79.3854C1187.37 79.3854 1187.37 0.000217349 1278.71 0.000225333C1370.04 0.000233318 1370.04 79.3854 1461.37 79.3854C1552.71 79.3854 1552.71 0.000249287 1644.04 0.000257272C1735.37 0.000265256 1735.37 79.3855 1826.71 79.3855C1918.04 79.3855 1918.04 0.000281225 2009.35 0.000289208C2100.67 0.000297191 2100.67 79.3855 2192 79.3855L0 79.3853Z" fill="#5a5a5f"/>
-                          </svg>
-                    </section>
+
+  <section class="banner grid-center">
+  <div class="col-6-middle centered">
+    <h2 class="big-bold"> This this a heading </h2>
+    <h3 class="not-bold"> This is a sub-heading </h3>
+  </div>
+  </section>
+css_code_block: |
+
+  .banner {
+    background-image: url('/images/adventure.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+  }
+
 ---
-
-

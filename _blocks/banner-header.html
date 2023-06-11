@@ -1,0 +1,40 @@
+---
+header-bar-link:
+heading: banner with a header
+html_code_block: |
+
+  <section class="banner-with-header grid-center padded">
+    <header class="absolute-header grid">
+      <div class="col-4-middle">
+        <a href="/">
+          <h2 class="logo"> LOGO </h2>
+        </a>
+      </div>
+      <nav class="col-8-middle right">
+        <a href="#"> Link </a>
+        <a href="#"> Link </a>
+        <a href="#"> Link </a>
+        <a href="#"> Link </a>
+      </nav>
+    </header>
+    <div class="col-6_sm-12-middle centered">
+      <h2 class="big-bold"> This this a heading </h2>
+      <h3 class="not-bold"> This is a sub-heading </h3>
+    </div>
+  </section>
+css_code_block: |
+
+  .banner-with-header {
+    padding-top: 6rem;
+    min-height: 100vh;
+  }
+  .absolute-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: none;
+  }
+
+---

@@ -1,0 +1,78 @@
+---
+header-bar-link: price
+heading: pricing
+html_code_block: |
+
+  <section class="light-bg centered padded">
+    <h2> Pricing </h2>
+    <div class="grid padded-1">
+
+      <div class="col-4_sm-12 padded-1">
+        <div class="pricing card">
+          <p class="pricing-name"> Light </p>
+          <p class="price"> $18 </p>
+          <ul class="no-bullets">
+            <li> lorem ipsum </li>
+            <li> dolor itsu </li>
+            <li> picachu boo </li>
+          </ul>
+          <a href="#" class="button"> Buy Me </a>
+        </div>
+      </div>
+
+      <div class="col-4_sm-12 padded-1">
+        <div class="featured card">
+          <p class="pricing-name"> Standard </p>
+          <p class="price"> $57 </p>
+          <ul class="no-bullets">
+            <li> lorem ipsum </li>
+            <li> dolor itsu </li>
+            <li> picachu boo </li>
+          </ul>
+          <a href="#" class="button"> Buy Me </a>
+        </div>
+      </div>
+
+      <div class="col-4_sm-12 padded-1">
+        <div class="pricing card">
+          <p class="pricing-name"> Extreme </p>
+          <p class="price"> $99 </p>
+          <ul class="no-bullets">
+            <li> lorem ipsum </li>
+            <li> dolor itsu </li>
+            <li> picachu boo </li>
+          </ul>
+          <a href="#" class="button"> Buy Me </a>
+        </div>
+      </div>
+    </section>
+css_code_block: |
+
+  .no-bullets { list-style:none; }
+  /* Used to remove dot-points from a list */
+  .card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  .card.featured {
+    border: 2px solid orange;
+  }
+
+  .price {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .pricing-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(120,120,125);
+  }
+
+  .card .button {
+    margin-top:2rem;
+  }
+
+---
