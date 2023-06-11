@@ -4,17 +4,17 @@ heading: Image & Text Grid 1
 html_code_block: |
 
   <section class="light-bg">
-    <div class="grid flex-flip">
-      <div class="col-6_sm-12 bg-image bg-yoga"></div>
-      <div class="col-6_sm-12-middle padded">
+    <div class="grid md:grid-cols-2">
+      <div class="bg-image bg-yoga"></div>
+      <div class="self-center p-5p">
         <h3> This this a heading </h3>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <a class="subtle-button" href="#"> Read More > </a>
       </div>
     </div>
-    <div class="grid flex-flip">
-      <div class="col-6_sm-12 bg-image bg-wellness"></div>
-      <div class="col-6_sm-12-middle padded">
+    <div class="grid md:grid-cols-2 ">
+      <div class="bg-image bg-wellness md:order-2"></div>
+      <div class="p-5p">
         <h3> This this a heading </h3>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <a class="subtle-button" href="#"> Explore > </a>
@@ -22,6 +22,10 @@ html_code_block: |
     </div>
   </section>
 css_code_block: |
+
+  .grid-flip:nth-child(2n) .bg-image {
+    order: 2
+  }
 
   .subtle-button { /* this is the arrow button */
     color: rgb(120,120,125);
