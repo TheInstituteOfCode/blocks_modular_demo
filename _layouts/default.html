@@ -1,100 +1,19 @@
 ---
+layout: base
 ---
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <head>
-
-  <!-- Meta Data -->
-<meta charset="utf-8">
-
-    <!-- Meta data for SEO purposes. -->
-    <title> IOC Modular Blocks </title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-    <!-- meta data to tell the browser that your devide is responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <!--  Social media sharing META Tags -->
-    <meta property="og:title" content="IOC Modular Blocks">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="/blocks">
-    <meta name="twitter:card" content="">
-    <meta name="og:site_name" content="<!-- ADD SITE NAME HERE -->">
-
-<!-- end of meta tags -->
-
-<!-- code styling css and js-->
-<link rel="stylesheet" href="/assets/prism_beige.css">
-<!-- <link rel="stylesheet" href="/assets/prism.css"> -->
-
-<script type="text/javascript" src="/assets/prism.js" defer>
-
-</script>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<!-- Gridlex
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css"> -->
-
-<!-- Font Awesome Version 5 for Icons  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
-
-<!-- Fancybox Popup for lightbox galleries   -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-
-<!-- our own custom stylesheet -->
-<link rel="stylesheet" href="/assets/css/style.css">
-
-<!-- Google Analytics -->
-
-<!-- paste your google analytics code here -->
-
-<!-- end google analytics -->
-
-
-
-
-<meta name="robots" content="noindex">
-
-</head>
-
-  <body>
-    <header class="nav">
-      {% for block in site.blocks %}
-        {% if block.header-bar-link %}
-          <a href="/#{{forloop.index}}-section" class="caps">{{block.header-bar-link}}</a>
-        {% endif %}
-      {% endfor %}
-    </header>
-    <header class="nav not-fixed">
-      {% for block in site.blocks  %}
-        {% if block.header-bar-link %}
-          <a href="/#{{block.header-bar-link}}" class="caps">{{block.header-bar-link}}</a>
-        {% endif %}
-      {% endfor %}
-    </header>
-
-
-    {{content}}
-
-
-
-
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous" defer></script>
-
-    <!-- adds Fancybox Javascript -->
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-    <script src="/assets/main.js" defer></script>
-
-  </body>
-</html>
+<div class="blocks-container">
+  <header class="nav">
+    {% for block in site.blocks %}
+      {% if block.header-bar-link %}
+        <a href="/#{{forloop.index}}-section" class="caps">{{block.header-bar-link}}</a>
+      {% endif %}
+    {% endfor %}
+  </header>
+  <header class="nav not-fixed">
+    {% for block in site.blocks  %}
+      {% if block.header-bar-link %}
+        <a href="/#{{block.header-bar-link}}" class="caps">{{block.header-bar-link}}</a>
+      {% endif %}
+    {% endfor %}
+  </header>
+</div>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            lineHeight: {
+                'tight': '0.9',
+                'snug': '1.1',
+                'normal': '1.5',
+                'relaxed': '1.625',
+                'loose': '2',
+            },
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              aspectRatio: {
+                'landscape': '5 / 3',
+                'portrait': '3 / 5',
+              },
+            },
+          }
+        }
+      </script>
+</head>
+<body>
+
+<style type="text/tailwindcss">
+       
+    h1, h2, h3 {
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 0.5em;
+        letter-spacing: -0.01em;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5, p {
+        margin-bottom: 1em;
+    }
+
+    .button {
+        @apply inline-block bg-gray-900 uppercase tracking-wide text-white hover:bg-gray-600 px-6 py-2;
+    }
+
+</style> 
+
+                
+              
+<header class="flex justify-center items-center p-8 max-w-screen-xl mx-auto">
+    <div class="grow">
+      <a href="/">
+        <h2 class="logo"> LOGO </h2>
+      </a>
+    </div>
+    <nav class="grow text-right">
+      <a href="#" class="p-2"> Link </a>
+      <a href="#" class="p-2"> Link </a>
+      <a href="#" class="p-2"> Link </a>
+    </nav>
+  </header>
+  
+              
+      
+
+<section class="p-8 max-w-screen-xl mx-auto"> 
+    <h1 class="py-4"> This is a fun heading </h1>
+    <div class="bg-cover bg-center min-h-[40vh]" style="background-image:url('/images/moody/moody-1.jpg')"> 
+    </div>
+    <div class="grid grid-cols-6 gap-4 py-8">
+        <div> 
+            <p class="font-bold text-xl"> 
+                <span class="block capitalize text-xs">Fact:</span>
+                900 
+            </p>
+        </div>
+        <div>
+            <p class="font-bold text-x"> 
+                <span class="block capitalize text-xs">Fact:</span>
+                Y2K
+            </p>   
+        </div>
+        <div>
+            <p class="font-bold text-xl"> 
+                <span class="block capitalize text-xs">Fact:</span>
+                420K
+            </p>
+        </div>
+        <div class="col-span-3">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus eius reprehenderit totam eos voluptatem dolore quaerat veniam doloremque sapiente, cumque, quis, maxime adipisci ex? Unde minima quisquam sapiente ea?</p>    
+        </div>
+    </div>
+</section>
+
+<section class="p-8 max-w-screen-xl mx-auto">
+    <div class="max-w-screen-md mx-auto text-center pb-4">
+        <h2 class="mb-2"> Another heading </h2>
+        <h3> Smaller subheading </h3>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur rerum commodi dolorem voluptatum totam facilis labore iusto culpa laborum repudiandae voluptas similique vero itaque nostrum, sed sapiente id harum soluta!</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <img src="/images/moody/moody-2.jpg">
+        <img src="/images/moody/moody-3.jpg">
+        <img src="/images/moody/moody-4.jpg">
+        <img src="/images/moody/moody-5.jpg">
+        <img src="/images/moody/moody-6.jpg">
+        <img src="/images/moody/moody-7.jpg">
+    </div>
+    <div class="text-center p-4">
+        <a href="#" class="button"> Sign up </a>
+    </div>
+
+
+</section>
+
+<section class="p-8 max-w-screen-xl mx-auto">
+
+    <div class="pb-8">
+        <h2 class="mb-2 leading-tight"> This is a <br>fun heading </h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+        <div class="p-12 pl-0">
+            <h3 class="border-b border-b-2 border-gray-800 mb-0 max-w-xs"> Another heading </h3>
+            <h4 class="mb-4">  This is a slick subheading </h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est 
+                sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis?</p>
+            <a href="#" class="button mt-4"> Sign up </a>
+        </div>
+        <div class="bg-cover bg-center" style="background-image:url('/images/moody/moody-1.jpg')" >
+            
+        </div>
+    
+    </div>
+
+</section>
+
+<section class="p-8 max-w-screen-xl mx-auto text-center">
+    <h2 class="text-border-y border-y-2 border-gray-800 p-12 leading-snug"> Sometimes all you need is a big random block of text to really drive the point home </h2> 
+</section>
+<section class="p-8">
+
+</section>
+
+
+
+
+
+
+
+</body>
