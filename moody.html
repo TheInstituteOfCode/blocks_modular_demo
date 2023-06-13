@@ -54,9 +54,28 @@
         margin-bottom: 1em;
     }
 
+    footer a {
+        @apply block uppercase tracking-wide pb-1;
+    }
+
+    /* Form Styling  */
+
     .button {
         @apply inline-block bg-gray-900 uppercase tracking-wide text-white hover:bg-gray-600 px-6 py-2;
     }
+
+    label {
+        @apply uppercase tracking-wide font-bold;
+    }
+    
+    input{
+        @apply block border border-2 border-gray-900 p-2 resize-none;
+    }
+ 
+    textarea {
+        @apply block border border-2 border-gray-900 p-2 resize-none;
+    }
+    
 
 </style> 
 
@@ -145,7 +164,7 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis?</p>
             <a href="#" class="button mt-4"> Sign up </a>
         </div>
-        <div class="bg-cover bg-center" style="background-image:url('/images/moody/moody-1.jpg')" >
+        <div class="bg-cover bg-center" style="background-image:url('/images/moody/moody-8.jpg')" >
             
         </div>
     
@@ -156,12 +175,92 @@
 <section class="p-8 max-w-screen-xl mx-auto text-center">
     <h2 class="text-border-y border-y-2 border-gray-800 p-12 leading-snug"> Sometimes all you need is a big random block of text to really drive the point home </h2> 
 </section>
-<section class="p-8">
 
+<section class="py-8 max-w-screen-2xl mx-auto grid grid-cols-6">
+    <div class="col-span-1 relative">
+        <h2 class="[writing-mode:vertical-rl] rotate-180 absolute right-4"> Gallery </h2>
+    </div>
+    <div class="col-span-4">
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est 
+            sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores explicabo aut iure voluptates nostrum est sunt a vel hic quia voluptatem, expedita beatae perferendis unde, vitae ducimus nemo cum! Quis?</p>
+        <a href="#" class="button mt-4 mb-4"> Sign up </a>
+    </div>
+    <div class="col-span-1"></div>
+</section>
+
+<section class="grid grid-cols-6 gap-4 items-center max-w-screen-2xl mx-auto mb-12">
+    <div class="col-span-1">
+        <img src="/images/moody/moody-9.jpg">
+    </div>
+    <div class="col-span-2">
+        <img src="/images/moody/moody-10.jpg">
+    </div>
+    <div class="col-span-2">
+        <img src="/images/moody/moody-11.jpg">
+    </div>
+    <div class="col-span-1">
+        <img src="/images/moody/moody-12.jpg">
+    </div>
 </section>
 
 
+<section class="max-w-screen-xl mx-auto border-y border-y-2 border-gray-800 px-8 py-16"> 
+    <div class="grid grid-cols-5 gap-4">
+        <div class="col-span-full">
+            <h2> Contact Us. </h2>
+        </div>
+        <div class="col-span-3 pr-12">
+            <form action="#">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Any name will do" class="min-w-[50%] mb-4">
+                <label for="email">Email</label>
+                <input type="text" id="lname" name="lname" placeholder="We prefer something real" class="min-w-[50%] mb-4">
+                <label for="message">Message</label>
+                <textarea name="message" rows="10" placeholder="The cat was playing in the garden" class="min-w-full mb-4"></textarea>
+                <div class="text-right">
+                    <input type="submit" value="Send it baby" class="button ">
+                </div>
+              </form> 
+              
+        </div>
+        <div class="col-span-2 bg-cover bg-center" style="background-image:url('/images/moody/moody-13.jpg')"> 
+        </div>
 
+    </div>
+</section>
+
+<footer class="max-w-screen-xl mx-auto grid grid-cols-5 py-16">
+    <div class="col-span-1">
+        <h5 class="font-bold uppercase"> LOREM IPSUM </h5>
+        <nav> 
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 1 </a>
+        </nav>    
+    </div>
+    <div class="col-span-1">
+        <h5 class="font-bold uppercase"> LOREM IPSUM </h5>
+        <nav> 
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 1 </a>
+        </nav>      
+    </div>
+    <div class="col-span-3 text-right">
+        <h5 class="font-bold uppercase"> Subscribe to our newsletter </h5>
+        <form action="#">
+            <input type="text" id="lname" name="lname" placeholder="Your email" class="ml-auto min-w-[50%] mb-4">
+            
+        <input type="submit" value="Subscribe" class="button ">
+            
+          </form> 
+    </div>
+
+</footer>
 
 
 
